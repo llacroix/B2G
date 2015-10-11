@@ -30,7 +30,7 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
+GITREPO=${GITREPO:-"git://github.com/llacroix/b2g-manifest"}
 BRANCH=${BRANCH:-master}
 
 while [ $# -ge 1 ]; do
@@ -124,6 +124,11 @@ case "$1" in
 	echo PRODUCT_NAME=flame >> .tmp-config &&
 	repo_sync $1
 	;;
+
+"firee")
+    echo PRODUCT_NAME=firee >> .tmp-config &&
+    repo_sync $1
+    ;;
 
 "tarako")
 	echo DEVICE=sp6821a_gonk >> .tmp-config &&
